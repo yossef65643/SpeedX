@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android' // إضافة دعم Kotlin
+    id 'com.google.gms.google-services' // إضافة Google services plugin
+    id 'dev.flutter.flutter-gradle-plugin' // إضافة Flutter plugin
+}
+
+android {
+    namespace = "com.example.SpeedX" // استبدل بالمساحة الخاصة بك
+    compileSdk = 34 // الإصدار المستهدف من SDK
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.SpeedX" // معرف التطبيق
+        minSdk = 21 // الحد الأدنى من SDK
+        targetSdk = 34 // الإصدار المستهدف
+        versionCode = 1 // عدّل مع كل إصدار جديد
+        versionName = "1.0" // عدّل مع كل إصدار جديد
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false // تعطيل التمحيص لتسهيل التصحيح
+            shrinkResources false // تعطيل إزالة الموارد غير المستخدمة لتجنب الأخطاء
+            signingConfig signingConfigs.debug // استخدم توقيع افتراضي أو مخصص
+        }
+    }
+}
+
+flutter {
+    source = "../.." // تأكد من صحة مسار مصدر تطبيق Flutter
+}
+
+dependencies {
+    // استيراد Firebase BoM لإدارة الإصدارات المتوافقة
+    implementation platform('com.google.firebase:firebase-bom:33.4.0')
+
+    // إضافة تبعيات Firebase
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging' // دعم Firebase Messaging
+
+    // تبعيات أخرى حسب الحاجة
+}

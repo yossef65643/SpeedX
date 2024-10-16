@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "412796394600",
+    "project_id": "speedx-74401",
+    "storage_bucket": "speedx-74401.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412796394600:android:5e01edc1cf2a03c0c52fdd",
+        "android_client_info": {
+          "package_name": "com.example.SpeedX"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnBpWml80rwbciQEwg3ikjfUDeaJ24y5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
